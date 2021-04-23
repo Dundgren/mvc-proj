@@ -1,14 +1,19 @@
 <?php
 
-namespace Dundgren\Controller;
+namespace Dundgren\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Dundgren\Dice\Dice;
+use Dundgren\Models\Dice\Dice;
 
 class DiceController extends Controller
 {
     public function roll()
     {
-        return view("dice.index");
+        $dice = new Dice(6);
+        $res = $dice->rollDice();
+
+        return view("dice.index", [
+            "result" => $res,
+        ]);
     }
 }

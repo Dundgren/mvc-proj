@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Dundgren\Controller\DiceController;
+use Dundgren\Http\Controllers\DiceController;
 
 /*
 |--------------------------------------------------------------------------
