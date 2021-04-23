@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Dundgren\Game21;
+namespace Dundgren;
 
+use Dundgren\Models\Game21\Game21;
 use PHPUnit\Framework\TestCase;
-use Psr\Http\Message\ResponseInterface;
 
 /**
  * Test cases for the Dice class.

@@ -21,13 +21,9 @@ Route::get('/', function () {
 
 Route::get("/dice", [DiceController::class, "roll"]);
 
-Route::prefix("game21")->group(function() {
+Route::prefix("game21")->group(function () {
+    Route::get("/", [Game21Controller::class, "reset"]);
     Route::post("/start", [Game21Controller::class, "playerRoll"]);
     Route::post("/stop", [Game21Controller::class, "botRoll"]);
-    Route::get("/", [Game21Controller::class, "reset"]);
     Route::post("/clear", [Game21Controller::class, "clear"]);
 });
-
-
-
-

@@ -7,7 +7,7 @@
 declare(strict_types=1);
 
 $header = $header ?? null;
-$message = "$message" ?? null;
+$message = $message ?? null;
 $playerSum = $_SESSION["playerSum"] ?? 0;
 $botSum = $_SESSION["botSum"] ?? 0;
 $playerResults = $_SESSION["playerResults"] ?? null;
