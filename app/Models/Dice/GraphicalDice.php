@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dundgren\Dice;
+namespace Dundgren\Models\Dice;
 
 /**
  * Class Dice.

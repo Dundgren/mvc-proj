@@ -2,36 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Dundgren\Controller;
+namespace Dundgren\Http\Controllers;
 
-use Nyholm\Psr7\Factory\Psr17Factory;
-use Psr\Http\Message\ResponseInterface;
-use Dundgren\Game21\Game21;
-
-use function Mos\Functions\renderView;
+use Dundgren\Models\Game21\Game21;
 
 /**
  * Controller for game 21
  */
 class Game21Controller
 {
-    private function render($message): ResponseInterface
+    private function render($message)
     {
-        $psr17Factory = new Psr17Factory();
-
-        $data = [
+        return view("game21.index", [
             "header" => "Game 21",
             "message" => $message,
-        ];
-
-        $body = renderView("layout/game21.php", $data);
-
-        return $psr17Factory
-            ->createResponse(200)
-            ->withBody($psr17Factory->createStream($body));
+        ]);
     }
 
-    public function reset(): ResponseInterface
+    public function reset()
     {
         $game = new Game21();
         $message = $game->resetGame();
@@ -39,7 +27,7 @@ class Game21Controller
         return $this->render($message);
     }
 
-    public function clear(): ResponseInterface
+    public function clear()
     {
         $game = new Game21();
         $game->clearHistory();
@@ -48,7 +36,7 @@ class Game21Controller
         return $this->render($message);
     }
 
-    public function playerRoll(): ResponseInterface
+    public function playerRoll()
     {
         $game = new Game21();
         $message = $game->playerRoll();
@@ -56,7 +44,7 @@ class Game21Controller
         return $this->render($message);
     }
 
-    public function botRoll(): ResponseInterface
+    public function botRoll()
     {
         $game = new Game21();
         $message = $game->botRoll();

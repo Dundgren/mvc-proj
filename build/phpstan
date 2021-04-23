@@ -1,0 +1,129 @@
+ ------ ------------------------------------------------------------------------ 
+  Line   app/Http/Controllers/Debug.php                                          
+ ------ ------------------------------------------------------------------------ 
+  22     Call to method withStatus() on an unknown class Nyholm\Psr7\Response.   
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols      
+  22     Instantiated class Nyholm\Psr7\Response not found.                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols      
+  24     Call to static method create() on an unknown class Nyholm\Psr7\Stream.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols      
+ ------ ------------------------------------------------------------------------ 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Error.php                                                         
+ ------ --------------------------------------------------------------------------------------- 
+  19     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  28     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  30     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  37     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  47     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  49     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Game21Controller.php                                              
+ ------ --------------------------------------------------------------------------------------- 
+  20     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  29     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  31     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Index.php                                                         
+ ------ --------------------------------------------------------------------------------------- 
+  19     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  28     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  30     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Sample.php                                                        
+ ------ --------------------------------------------------------------------------------------- 
+  19     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  28     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  30     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Session.php                                                       
+ ------ --------------------------------------------------------------------------------------- 
+  24     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  28     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  30     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  39     Call to method withStatus() on an unknown class Nyholm\Psr7\Response.                  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  39     Instantiated class Nyholm\Psr7\Response not found.                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/TwigView.php                                                      
+ ------ --------------------------------------------------------------------------------------- 
+  19     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  28     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  30     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/YatzyController.php                                               
+ ------ --------------------------------------------------------------------------------------- 
+  20     Instantiated class Nyholm\Psr7\Factory\Psr17Factory not found.                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  29     Call to method createResponse() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+  31     Call to method createStream() on an unknown class Nyholm\Psr7\Factory\Psr17Factory.    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                     
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  Line   app/Http/Middleware/Authenticate.php                                                                              
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  17     Method App\Http\Middleware\Authenticate::redirectTo() should return string|null but return statement is missing.  
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ -------------------------------------------------------------------- 
+  Line   app/Models/Dice/DiceHand.php                                        
+ ------ -------------------------------------------------------------------- 
+         Reflection error: Dundgren\Dice\Dice not found.                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+  Line   app/Models/Dice/GraphicalDice.php                                   
+ ------ -------------------------------------------------------------------- 
+         Reflection error: Dundgren\Dice\Dice not found.                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+  Line   app/Models/functions.php                                            
+ ------ -------------------------------------------------------------------- 
+  70     Instantiated class Twig\Loader\FilesystemLoader not found.          
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  76     Instantiated class Twig\Environment not found.                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ [ERROR] Found 34 errors                                                                                                
+

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dundgren\Game21;
+namespace Dundgren\Models\Game21;
 
-use Dundgren\Dice\DiceHand;
+use Dundgren\Models\Dice\DiceHand;
 
 class Game21
 {
