@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Dundgren\Controller\DiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts', function () {
+Route::get('/', function () {
     return view("posts.index");
 });
+
+Route::get("/dice", [DiceController::class, "roll"]);
