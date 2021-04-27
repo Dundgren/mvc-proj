@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Dundgren\Models\Game21;
 
 use Dundgren\Models\Dice\DiceHand;
+use Dundgren\Http\Controllers\WinnerController;
 
 class Game21
 {
@@ -76,6 +77,9 @@ class Game21
 
         if ($playerSum == 21) {
             $result = "win";
+
+            $wCon = new WinnerController();
+            $wCon->addWinner("Player");
         } elseif ($playerSum > 21) {
             $result = "loss";
         }
@@ -91,6 +95,9 @@ class Game21
 
         if ($botSum == 21) {
             $result = "loss";
+
+            $wCon = new WinnerController();
+            $wCon->addWinner("Bot");
         } elseif ($botSum > 21) {
             $result = "win";
         } elseif ($botSum >= $_SESSION["playerSum"]) {

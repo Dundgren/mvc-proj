@@ -11,7 +11,7 @@ class BookController extends Controller
     public function getData()
     {
         $books = [];
-        foreach(Book::all() as $book) {
+        foreach (Book::all() as $book) {
             array_push($books, $book);
         }
 

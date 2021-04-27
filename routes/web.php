@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Dundgren\Http\Controllers\DiceController;
 use Dundgren\Http\Controllers\Game21Controller;
 use Dundgren\Http\Controllers\BookController;
+use Dundgren\Http\Controllers\WinnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::prefix("game21")->group(function () {
 });
 
 Route::get("/book", [BookController::class, "getData"]);
+
+Route::get("/winner", [WinnerController::class, "getData"]);

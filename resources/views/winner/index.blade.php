@@ -1,7 +1,8 @@
 @extends("layouts.app")
 
 @section("content")
-    <h1>Books!</h1>
+    <h1>Winners!</h1>
+    <h2>These are winners who achieved a perfect score of 21!</h2>
     <table>
         <tr>
         <th>Titel</th>
@@ -9,12 +10,9 @@
         <th>ISBN</th>
         <th>Bild-länk</th>
         </tr>
-        @foreach ($books as $book)
+        @foreach ($winners as $winner)
             <tr>
-            <td>{{ $book->titel }}</td>
-            <td>{{ $book->forfattare }}</td>
-            <td>{{ $book->ISBN }}</td>
-            <td><a href="{{ $book->bild }}">{{ $book->bild }}</a></td>
+            <td>test</td>
             </tr>
         @endforeach
     </table>

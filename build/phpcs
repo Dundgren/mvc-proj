@@ -1,0 +1,61 @@
+
+FILE: ...e/dundgren2/winhome/dbwebb-kurser/mvc/me/orm/mvc-app/app/Models/Winner.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 10 | ERROR | [x] There must be a blank line following the last trait import
+    |       |     statement
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...ome/dundgren2/winhome/dbwebb-kurser/mvc/me/orm/mvc-app/app/Models/Book.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 10 | ERROR | [x] There must be a blank line following the last trait import
+    |       |     statement
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...e/dbwebb-kurser/mvc/me/orm/mvc-app/app/Http/Controllers/BookController.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 14 | ERROR | [x] Expected 1 space(s) after FOREACH keyword; 0 found
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...mvc-app/database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+
+FILE: ...e/orm/mvc-app/database/migrations/2014_10_12_000000_create_users_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+
+FILE: ...app/database/migrations/2014_10_12_100000_create_password_resets_table.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a
+   |       | top-level vendor name)
+--------------------------------------------------------------------------------
+
+Time: 706ms; Memory: 8MB
+
