@@ -5,14 +5,15 @@
     <h2>These are winners who achieved a perfect score of 21!</h2>
     <table>
         <tr>
-        <th>Titel</th>
-        <th>Författare</th>
-        <th>ISBN</th>
-        <th>Bild-länk</th>
+        <th>Id</th>
+        <th>Winner</th>
+        <th>Time of perfect score</th>
         </tr>
         @foreach ($winners as $winner)
             <tr>
-            <td>test</td>
+            <td>{{ $winner->id }}</td>
+            <td>{{ $winner->name }}</td>
+            <td>{{ $winner->updated_at }}</td>
             </tr>
         @endforeach
     </table>
