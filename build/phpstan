@@ -1,9 +1,14 @@
- ------ --------------------------------------------------------------------- 
-  Line   app/Http/Middleware/Authenticate.php                                 
- ------ --------------------------------------------------------------------- 
-  17     Method App\Http\Middleware\Authenticate::redirectTo() should return  
-         string|null but return statement is missing.                         
- ------ --------------------------------------------------------------------- 
+ ------ ---------------------------------------------------------------- 
+  Line   app/Http/Controllers/WinnerController.php                       
+ ------ ---------------------------------------------------------------- 
+  27     Access to an undefined property Dundgren\Models\Winner::$name.  
+ ------ ---------------------------------------------------------------- 
 
- [ERROR] Found 1 error                                                          
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  Line   app/Http/Middleware/Authenticate.php                                                                              
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  17     Method App\Http\Middleware\Authenticate::redirectTo() should return string|null but return statement is missing.  
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ [ERROR] Found 2 errors                                                                                                 
 

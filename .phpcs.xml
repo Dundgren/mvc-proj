@@ -12,6 +12,7 @@
     <exclude-pattern>vendor</exclude-pattern>
     <exclude-pattern>storage</exclude-pattern>
     <exclude-pattern>framework</exclude-pattern>
+    <exclude-pattern>database</exclude-pattern>
 
     <arg name="encoding" value="utf-8"/>
     <arg name="warning-severity" value="0"/>

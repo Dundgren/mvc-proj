@@ -11,7 +11,7 @@ class WinnerController extends Controller
     public function getData()
     {
         $winners = [];
-        foreach(Winner::all() as $win) {
+        foreach (Winner::all() as $win) {
             array_push($winners, $win);
         }
 
