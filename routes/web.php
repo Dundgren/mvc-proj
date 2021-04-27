@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Dundgren\Http\Controllers\DiceController;
 use Dundgren\Http\Controllers\Game21Controller;
+use Dundgren\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::prefix("game21")->group(function () {
     Route::post("/stop", [Game21Controller::class, "botRoll"]);
     Route::post("/clear", [Game21Controller::class, "clear"]);
 });
+
+Route::get("/book", [BookController::class, "getData"]);

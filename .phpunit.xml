@@ -12,7 +12,7 @@
   </coverage>
   <testsuites>
     <testsuite name="all">
-      <directory>test</directory>
+      <directory>tests</directory>
     </testsuite>
   </testsuites>
   <logging/>
