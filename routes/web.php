@@ -21,15 +21,11 @@ Route::get('/', function () {
     return view("posts.index");
 });
 
-Route::get("/dice", [DiceController::class, "roll"]);
-
 Route::prefix("game21")->group(function () {
     Route::get("/", [Game21Controller::class, "reset"]);
     Route::post("/start", [Game21Controller::class, "playerRoll"]);
     Route::post("/stop", [Game21Controller::class, "botRoll"]);
     Route::post("/clear", [Game21Controller::class, "clear"]);
 });
-
-Route::get("/book", [BookController::class, "getData"]);
 
 Route::get("/winner", [WinnerController::class, "getData"]);
