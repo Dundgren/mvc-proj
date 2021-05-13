@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dundgren\Dice;
+namespace Dundgren\Models\Dice;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
@@ -18,8 +18,8 @@ class GraphicalDiceTest extends TestCase
     public function testCreateGraphicalDiceClass()
     {
         $graphDice = new GraphicalDice();
-        $this->assertInstanceOf("Dundgren\Dice\Dice", $graphDice);
-        $this->assertInstanceOf("Dundgren\Dice\GraphicalDice", $graphDice);
+        $this->assertInstanceOf("Dundgren\Models\Dice\Dice", $graphDice);
+        $this->assertInstanceOf("Dundgren\Models\Dice\GraphicalDice", $graphDice);
     }
 
     public function testGetIcon()

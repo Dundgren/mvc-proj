@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dundgren\Dice;
+namespace Dundgren\Models\Dice;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
@@ -18,7 +18,7 @@ class DiceTest extends TestCase
     public function testCreateDiceClass()
     {
         $dice = new Dice(6);
-        $this->assertInstanceOf("Dundgren\Dice\Dice", $dice);
+        $this->assertInstanceOf("Dundgren\Models\Dice\Dice", $dice);
     }
 
     public function testRollDice()

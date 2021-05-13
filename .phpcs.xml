@@ -8,11 +8,12 @@
     <exclude-pattern>build</exclude-pattern>
     <exclude-pattern>cache</exclude-pattern>
     <exclude-pattern>doc</exclude-pattern>
-    <exclude-pattern>theme</exclude-pattern>
     <exclude-pattern>vendor</exclude-pattern>
     <exclude-pattern>storage</exclude-pattern>
     <exclude-pattern>framework</exclude-pattern>
     <exclude-pattern>database</exclude-pattern>
+    <exclude-pattern>node_modules</exclude-pattern>
+    <exclude-pattern>Middleware</exclude-pattern>
 
     <arg name="encoding" value="utf-8"/>
     <arg name="warning-severity" value="0"/>
