@@ -8,9 +8,13 @@
     </head>
     <body>
         @include("layouts.nav")
-        @yield("content")
+        <main class="main">
+            <div class="content">  
+                @yield("content")
+            </div>
+        </main>
     </body>
-    <footer>
+    <footer class="footer">
         <p>This is a footer!</p>
     </footer>
 </html>
