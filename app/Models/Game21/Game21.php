@@ -35,7 +35,6 @@ class Game21
     public function botRoll(): string
     {
         $bot = new DiceHand($_POST["dice"]);
-
         do {
             if ($_POST["dice"] > 0) {
                 $bot->rollDices();
@@ -62,6 +61,9 @@ class Game21
             "roundCount" => 0,
             "winners" => []
         ];
+        $_SESSION["currentBet"] = 0;
+        $_SESSION["playerMoney"] = $_SESSION["playerMoney"] ?? 1000;
+        $_SESSION["botMoney"] = $_SESSION["botMoney"] ?? 1000;
 
         return "Play a game of 21!";
     }
@@ -116,9 +118,13 @@ class Game21
         if ($result == "loss") {
             array_push($_SESSION["history"]["winners"], "bot");
             $_SESSION["history"]["roundCount"] += 1;
+            $_SESSION["playerMoney"] -= $_POST["bet"];
+            $_SESSION["botMoney"] += $_POST["bet"];
         } elseif ($result == "win") {
             array_push($_SESSION["history"]["winners"], "player");
             $_SESSION["history"]["roundCount"] += 1;
+            $_SESSION["botMoney"] -= $_POST["bet"];
+            $_SESSION["playerMoney"] += $_POST["bet"];
         }
     }
 

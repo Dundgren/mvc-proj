@@ -16,7 +16,9 @@ $numDice = $_POST["dice"] ?? 0;
 $started = $_GET["started"] ?? null;
 $result = $_SESSION["result"] ?? null;
 $history = $_SESSION["history"] ?? null;
-$test1 = $_SESSION['test1'] ?? "fail";
+$bet = $_POST["bet"] ?? 0;
+$playerMoney = $_SESSION["playerMoney"] ?? 0;
+$botMoney = $_SESSION["botMoney"] ?? 0;
 ?>
 
 @extends("layouts.app")
@@ -28,13 +30,18 @@ $test1 = $_SESSION['test1'] ?? "fail";
     @if (!$started == "go")
         <form method="POST" action="{{ url('/game21/start?started=go') }}">
             @csrf
-            <label for="dice">Choose number of dice:</label>
+            <label for="dice">Choose number of dice</label>
             <select name="dice">
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select>
+            <label for="bet">Choose amount to bet</label>
+            <input type="number" name="bet" min="1" max="100" required>
             <input type="submit" value="Start">
         </form>
+
+        <p>Player money: {{ $playerMoney }}</p>
+        <p>Bot money: {{ $botMoney }}</p>
 
         <p>Games played: {{ $history["roundCount"] }}</p>
         <p>
@@ -53,6 +60,7 @@ $test1 = $_SESSION['test1'] ?? "fail";
     @if ($started == "go" || $started == "stop")
         <p>Player sum: {{ $playerSum }}</p>
         <p>Number of dice: {{ $numDice }}</p>
+        <p>Current Bet: {{ $bet }}</p>
         <p class="dice-utf8">
         @foreach ($playerResults as $value)
             {!! $value !!} 
@@ -72,11 +80,13 @@ $test1 = $_SESSION['test1'] ?? "fail";
             <form class="lone-button" method="POST" action="{{ url('/game21/start?started=go') }}">
                 @csrf
                 <input type="hidden" name="dice" value="{{ $numDice }}">
+                <input type="hidden" name="bet" value="{{ $bet }}">
                 <input type="submit" value="Roll">
             </form>
             <form class="lone-button" method="POST" action="{{ url('/game21/stop?started=stop') }}">
                 @csrf
                 <input type="hidden" name="dice" value="{{ $numDice }}">
+                <input type="hidden" name="bet" value="{{ $bet }}">
                 <input type="submit" value="Stop">
             </form>
         @endif

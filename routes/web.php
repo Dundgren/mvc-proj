@@ -29,3 +29,5 @@ Route::prefix("game21")->group(function () {
 });
 
 Route::get("/winner", [WinnerController::class, "getData"]);
+
+Route::get("/scoretable", [WinnerController::class, "getData"]);
