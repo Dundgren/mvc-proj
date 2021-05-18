@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Mvc-project</title>
     </head>
     <body>
@@ -15,6 +16,7 @@
         </main>
     </body>
     <footer class="footer">
-        <p>This is a footer!</p>
+        <p>Github Repository</p>
+        <a href="https://github.com/Dundgren/mvc-proj"><i class="material-icons">folder</i></a>
     </footer>
 </html>

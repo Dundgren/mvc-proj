@@ -61,9 +61,6 @@ class Game21
         $_SESSION["currentBet"] = 0;
         $_SESSION["blackjack"] = false;
 
-        // $con = new ScoretableController();
-        // $con->reset();
-
         return "Play a game of 21!";
     }
 

@@ -6503,7 +6503,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-.social a, .nav a {
+a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -6553,13 +6553,13 @@ readers do not read off random characters that represent icons */
   background-color: #4c1074;
   text-align: center;
 }
-.nav a {
+a {
   display: inline-block;
   padding: 0 0.3em;
   font-size: 1.2em;
   font-weight: bold;
 }
-.nav a:hover {
+a:hover {
   color: #fff;
 }
 
@@ -6605,6 +6605,11 @@ readers do not read off random characters that represent icons */
   padding: 1em;
   display: grid;
   justify-content: center;
+  justify-items: center;
+}
+
+.footer i {
+  font-size: 2em;
 }
 
 /*
