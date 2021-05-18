@@ -1,19 +1,22 @@
 @extends("layouts.app")
 
 @section("content")
-    <h1>Winners!</h1>
-    <h2>These are winners who achieved a perfect score of 21!</h2>
+    <h1>Scoretable!</h1>
     <table>
         <tr>
-        <th>Id</th>
-        <th>Winner</th>
-        <th>Time of perfect score</th>
+        <th>Name</th>
+        <th>Wins</th>
+        <th>Blackjacks</th>
+        <th>Money</th>
+        <th>Last updated</th>
         </tr>
-        @foreach ($winners as $winner)
+        @foreach ($data as $row)
             <tr>
-            <td>{{ $winner->id }}</td>
-            <td>{{ $winner->name }}</td>
-            <td>{{ $winner->updated_at }}</td>
+            <td>{{ $row->name }}</td>
+            <td>{{ $row->wins }}</td>
+            <td>{{ $row->jackpots }}</td>
+            <td>{{ $row->money }}</td>
+            <td>{{ $row->updated_at }}</td>
             </tr>
         @endforeach
     </table>

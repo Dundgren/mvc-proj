@@ -1,13 +1,11 @@
 <?php
 
-namespace Dundgren\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Scoretable extends Model
+class Games_played extends Model
 {
     use HasFactory;
-
-    protected $table = "scoretable";
 }

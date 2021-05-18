@@ -1,11 +1,38 @@
 PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
-....................                                              20 / 20 (100%)
+................EEE.                                              20 / 20 (100%)
 
-Time: 00:00.112, Memory: 16.00 MB
+Time: 00:00.134, Memory: 16.00 MB
 
-OK (20 tests, 33 assertions)
+There were 3 errors:
 
-Generating code coverage report in Clover XML format ... done [00:00.021]
+1) Dundgren\Game21Test::testPlayerRollLoss
+Undefined index: bet
 
-Generating code coverage report in HTML format ... done [00:00.028]
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:121
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:89
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:28
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:60
+
+2) Dundgren\Game21Test::testBotRollLoss
+Undefined index: bet
+
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:126
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:109
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:44
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:78
+
+3) Dundgren\Game21Test::testBotRollWin
+Undefined index: bet
+
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:121
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:109
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:44
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:88
+
+ERRORS!
+Tests: 20, Assertions: 30, Errors: 3.
+
+Generating code coverage report in Clover XML format ... done [00:00.026]
+
+Generating code coverage report in HTML format ... done [00:00.042]

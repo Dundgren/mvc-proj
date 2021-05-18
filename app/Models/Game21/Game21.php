@@ -6,12 +6,14 @@ namespace Dundgren\Models\Game21;
 
 use Dundgren\Models\Dice\DiceHand;
 use Dundgren\Http\Controllers\WinnerController;
+use Dundgren\Http\Controllers\ScoretableController;
 
 class Game21
 {
     public function playerRoll(): string
     {
-
+        $sCon = new ScoretableController();
+        $sCon->addPlayer();
         if ($_POST["dice"] > 0) {
             $player = new DiceHand($_POST["dice"]);
 
@@ -63,7 +65,7 @@ class Game21
         ];
         $_SESSION["currentBet"] = 0;
         $_SESSION["playerMoney"] = $_SESSION["playerMoney"] ?? 1000;
-        $_SESSION["botMoney"] = $_SESSION["botMoney"] ?? 1000;
+        $_SESSION["botMoney"] = $_SESSION["botMoney"] ?? 500000;
 
         return "Play a game of 21!";
     }

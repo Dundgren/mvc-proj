@@ -4,11 +4,12 @@
   27     Access to an undefined property Dundgren\Models\Winner::$name.  
  ------ ---------------------------------------------------------------- 
 
- ------ ------------------------------------------------------------------------------------------------------------------ 
-  Line   app/Http/Middleware/Authenticate.php                                                                              
- ------ ------------------------------------------------------------------------------------------------------------------ 
-  17     Method App\Http\Middleware\Authenticate::redirectTo() should return string|null but return statement is missing.  
- ------ ------------------------------------------------------------------------------------------------------------------ 
+ ------ --------------------------------------------------------------------- 
+  Line   app/Http/Middleware/Authenticate.php                                 
+ ------ --------------------------------------------------------------------- 
+  17     Method App\Http\Middleware\Authenticate::redirectTo() should return  
+         string|null but return statement is missing.                         
+ ------ --------------------------------------------------------------------- 
 
- [ERROR] Found 2 errors                                                                                                 
+ [ERROR] Found 2 errors                                                         
 

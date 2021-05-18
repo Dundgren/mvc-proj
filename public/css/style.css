@@ -6610,19 +6610,20 @@ readers do not read off random characters that represent icons */
 /*
 * Form
 */
-input {
+input, select {
   display: block;
   width: 10em;
+  margin-bottom: 0.7em;
 }
 
 label {
   display: block;
 }
 
-select {
+/* select {
   display: block;
   width: 10em;
-}
+} */
 
 /*
 * Misc

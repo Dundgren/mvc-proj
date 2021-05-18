@@ -40,8 +40,8 @@ $botMoney = $_SESSION["botMoney"] ?? 0;
             <input type="submit" value="Start">
         </form>
 
-        <p>Player money: {{ $playerMoney }}</p>
-        <p>Bot money: {{ $botMoney }}</p>
+        <p>Player wallet: {{ $playerMoney }}</p>
+        <p>The house bank: {{ $botMoney }}</p>
 
         <p>Games played: {{ $history["roundCount"] }}</p>
         <p>
