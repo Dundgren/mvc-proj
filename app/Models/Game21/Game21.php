@@ -7,13 +7,12 @@ namespace Dundgren\Models\Game21;
 use Dundgren\Models\Dice\DiceHand;
 use Dundgren\Http\Controllers\WinnerController;
 use Dundgren\Http\Controllers\ScoretableController;
+use Dundgren\Http\Controllers\GamesPlayedController;
 
 class Game21
 {
     public function playerRoll(): string
     {
-        $sCon = new ScoretableController();
-        $sCon->addPlayer();
         if ($_POST["dice"] > 0) {
             $player = new DiceHand($_POST["dice"]);
 
@@ -59,13 +58,11 @@ class Game21
         $_SESSION["botResults"] = [];
         $_SESSION["playerSum"] = 0;
         $_SESSION["botSum"] = 0;
-        $_SESSION["history"] = $_SESSION["history"] ?? [
-            "roundCount" => 0,
-            "winners" => []
-        ];
         $_SESSION["currentBet"] = 0;
-        $_SESSION["playerMoney"] = $_SESSION["playerMoney"] ?? 1000;
-        $_SESSION["botMoney"] = $_SESSION["botMoney"] ?? 500000;
+        $_SESSION["blackjack"] = false;
+
+        // $con = new ScoretableController();
+        // $con->reset();
 
         return "Play a game of 21!";
     }
@@ -81,6 +78,7 @@ class Game21
 
         if ($playerSum == 21) {
             $result = "win";
+            $_SESSION["blackjack"] = true;
 
             $wCon = new WinnerController();
             $wCon->addWinner("Player");
@@ -99,6 +97,7 @@ class Game21
 
         if ($botSum == 21) {
             $result = "loss";
+            $_SESSION["blackjack"] = true;
 
             $wCon = new WinnerController();
             $wCon->addWinner("Bot");
@@ -117,16 +116,14 @@ class Game21
     {
         $_SESSION["result"] = $result;
 
-        if ($result == "loss") {
-            array_push($_SESSION["history"]["winners"], "bot");
-            $_SESSION["history"]["roundCount"] += 1;
-            $_SESSION["playerMoney"] -= $_POST["bet"];
-            $_SESSION["botMoney"] += $_POST["bet"];
-        } elseif ($result == "win") {
-            array_push($_SESSION["history"]["winners"], "player");
-            $_SESSION["history"]["roundCount"] += 1;
-            $_SESSION["botMoney"] -= $_POST["bet"];
-            $_SESSION["playerMoney"] += $_POST["bet"];
+        if ($result != "continue") {
+            $blackjack = $_SESSION["blackjack"] ? "Yes" : "No";
+
+            $gpCon = new GamesPlayedController();
+            $gpCon->addGame($result, $_POST["bet"], $blackjack, $_SESSION["playerSum"], $_SESSION["botSum"]);
+    
+            $sCon = new ScoretableController();
+            $sCon->handleResult($result, $_SESSION["blackjack"], $_POST["bet"]);
         }
     }
 
@@ -137,7 +134,7 @@ class Game21
         if ($result == "win") {
             $message = ("Player wins!");
         } elseif ($result == "loss") {
-            $message = ("Bot wins!");
+            $message = ("House wins!");
         } elseif ($result == "continue") {
             $message = ("Game started!");
         }

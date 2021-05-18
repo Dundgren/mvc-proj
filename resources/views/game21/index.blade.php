@@ -15,10 +15,7 @@ $botResults = $_SESSION["botResults"] ?? null;
 $numDice = $_POST["dice"] ?? 0;
 $started = $_GET["started"] ?? null;
 $result = $_SESSION["result"] ?? null;
-$history = $_SESSION["history"] ?? null;
 $bet = $_POST["bet"] ?? 0;
-$playerMoney = $_SESSION["playerMoney"] ?? 0;
-$botMoney = $_SESSION["botMoney"] ?? 0;
 ?>
 
 @extends("layouts.app")
@@ -38,22 +35,6 @@ $botMoney = $_SESSION["botMoney"] ?? 0;
             <label for="bet">Choose amount to bet</label>
             <input type="number" name="bet" min="1" max="100" required>
             <input type="submit" value="Start">
-        </form>
-
-        <p>Player wallet: {{ $playerMoney }}</p>
-        <p>The house bank: {{ $botMoney }}</p>
-
-        <p>Games played: {{ $history["roundCount"] }}</p>
-        <p>
-            Winners: 
-            @foreach ($history["winners"] as $winner)
-                {{ $winner }}, 
-            @endforeach
-        </p>
-
-        <form method="POST" class="lone-button" action="{{ url('/game21/clear') }}">
-            @csrf
-            <input type="submit" value="Clear history">
         </form>
     @endif
 

@@ -1,0 +1,13 @@
+
+FILE: ...e/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/GamesPlayedController.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 26 | ERROR | [x] Function closing brace must go on the next line following the
+    |       |     body; found 1 blank lines before brace
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+Time: 1.74 secs; Memory: 32MB
+

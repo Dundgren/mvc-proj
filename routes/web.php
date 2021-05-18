@@ -6,6 +6,7 @@ use Dundgren\Http\Controllers\Game21Controller;
 use Dundgren\Http\Controllers\BookController;
 use Dundgren\Http\Controllers\WinnerController;
 use Dundgren\Http\Controllers\ScoretableController;
+use Dundgren\Http\Controllers\GamesPlayedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,6 @@ Route::prefix("game21")->group(function () {
     Route::post("/clear", [Game21Controller::class, "clear"]);
 });
 
-Route::get("/winner", [WinnerController::class, "getData"]);
+Route::get("/games-played", [GamesPlayedController::class, "getData"]);
 
 Route::get("/scoretable", [ScoretableController::class, "getData"]);
