@@ -8,6 +8,13 @@
         <title>Mvc-project</title>
     </head>
     <body>
+        <div class="header">
+        <p class="logo">&#x2685</p>
+        <p class="title">
+            <a href="{{ URL::to('/') }}">Mvc-project</a>
+        </p>
+        <p class="logo">&#x2680</p>
+        </div>
         @include("layouts.nav")
         <main class="main">
             <div class="content">  

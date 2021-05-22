@@ -21,43 +21,33 @@ $bet = $_POST["bet"] ?? 0;
 @extends("layouts.app")
 
 @section("content")
-    <h1>{{ $header }}</h1>
-    <h2>{{ $message }}</h2>
+    <div class="justify-center span2">
+        <h1>{{ $header }}</h1>
+        <h2>{{ $message }}</h2>
+    </div>
 
     @if (!$started == "go")
-        <form method="POST" action="{{ url('/game21/start?started=go') }}">
+        <form method="POST" class="justify-center span2" action="{{ url('/game21/start?started=go') }}">
             @csrf
-            <label for="dice">Choose number of dice</label>
-            <select name="dice">
-                <option value="1">1</option>
-                <option value="2">2</option>
-            </select>
-            <label for="bet">Choose amount to bet</label>
+            <p>Choose number of dice</p>
+            <input type="radio" id="radio1" name="dice" value="1">
+            <label for="radio1">1</label>
+            <input type="radio" id="radio2" name="dice" value="2">
+            <label for="radio2">2</label>
+            <p>Choose amount to bet</p>
             <input type="number" name="bet" min="1" max="100" required>
             <input type="submit" value="Start">
         </form>
     @endif
+    
 
     @if ($started == "go" || $started == "stop")
-        <p>Player sum: {{ $playerSum }}</p>
+    <div>
         <p>Number of dice: {{ $numDice }}</p>
         <p>Current Bet: {{ $bet }}</p>
-        <p class="dice-utf8">
-        @foreach ($playerResults as $value)
-            {!! $value !!} 
-        @endforeach
-        </p>
-
-        @if ($started == "stop")
-            <p>Bot sum: {{ $botSum }}</p>
-            <p class="dice-utf8">
-            @foreach ($botResults as $value)
-                {!! $value !!} 
-            @endforeach
-            </p>
-        @endif
-
-        @if ($result == "continue")
+    </div>
+    @if ($result == "continue")
+    <div class="justify-right">
             <form class="lone-button" method="POST" action="{{ url('/game21/start?started=go') }}">
                 @csrf
                 <input type="hidden" name="dice" value="{{ $numDice }}">
@@ -70,8 +60,30 @@ $bet = $_POST["bet"] ?? 0;
                 <input type="hidden" name="bet" value="{{ $bet }}">
                 <input type="submit" value="Stop">
             </form>
-        @endif
+    </div>
     @endif
 
+        <div class="gamefield">
+            <h2>Player</h2>
+            <p>Player sum: {{ $playerSum }}</p>
+            <p class="dice-utf8">
+            @foreach ($playerResults as $value)
+                {!! $value !!} 
+            @endforeach
+            </p>
+        </div>
+
+        <div class="gamefield">
+            <h2>House</h2>
+            <p>House sum: {{ $botSum }}</p>
+            @if ($started == "stop")
+                <p class="dice-utf8">
+                @foreach ($botResults as $value)
+                    {!! $value !!} 
+                @endforeach
+                </p>
+            @endif
+        </div>
+    @endif
 
 @endsection

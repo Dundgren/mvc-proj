@@ -118,7 +118,7 @@ class Game21
 
             $gpCon = new GamesPlayedController();
             $gpCon->addGame($result, $_POST["bet"], $blackjack, $_SESSION["playerSum"], $_SESSION["botSum"]);
-    
+
             $sCon = new ScoretableController();
             $sCon->handleResult($result, $_SESSION["blackjack"], $_POST["bet"]);
         }

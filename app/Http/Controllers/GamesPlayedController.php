@@ -15,7 +15,10 @@ class GamesPlayedController extends Controller
             array_push($data, $row);
         }
 
+        $histogram = $this->getHistogram();
+
         return view("gamesplayed.index", [
+            "histogram" => $histogram,
             "data" => $data,
         ]);
     }
@@ -36,5 +39,26 @@ class GamesPlayedController extends Controller
         $game->bot_score = $botScore;
 
         $game->save();
+    }
+
+    private function getHistogram()
+    {
+        for ($i = 0; $i <= 21; $i++) {
+            $histogram[$i] = 0;
+        }
+
+        foreach (GamesPlayed::all() as $row) {
+            $score = 0;
+
+            if ($row->winner == "Player") {
+                $score = $row->player_score;
+            } elseif ($row->winner == "House") {
+                $score = $row->bot_score;
+            }
+
+            $histogram[$score] = $histogram[$score] + 1;
+        }
+
+        return $histogram;
     }
 }

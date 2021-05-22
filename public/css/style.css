@@ -6516,32 +6516,27 @@ a {
 * Header
 */
 .header {
-  padding: 1em;
+  padding: 0.5em;
   background-color: #4c1074;
   overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
 }
 
 .logo {
-  float: left;
-  width: 77px;
-  margin-right: 1em;
-}
-.logo img {
-  border-radius: 4%;
+  margin: 0;
+  font-size: 6em;
 }
 
 .title {
-  display: block;
+  align-self: center;
+  font-size: 2em;
 }
-.title h1 {
-  margin: 0;
-}
-.title p {
-  margin: 0;
-}
+
 .title a {
   text-decoration: none;
-  color: #eee;
+  color: #fff !important;
 }
 
 /*
@@ -6588,12 +6583,22 @@ a:hover {
 .content {
   width: 70%;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .content a {
   color: rgba(255, 255, 255, 0.8);
 }
 .content a:hover {
   color: #fff;
+}
+
+.gamefield {
+  background-color: #74389d;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+  grid-column: span 2;
 }
 
 /*
@@ -6615,20 +6620,22 @@ a:hover {
 /*
 * Form
 */
-input, select {
+input {
   display: block;
   width: 10em;
   margin-bottom: 0.7em;
 }
 
-label {
-  display: block;
+input[type=radio] {
+  display: inline;
+  width: auto;
+  margin: 0.5em;
 }
 
-/* select {
-  display: block;
-  width: 10em;
-} */
+label {
+  display: inline;
+}
+
 
 /*
 * Misc
@@ -6643,4 +6650,16 @@ label {
 
 .dice-utf8 {
   font-size: 2em;
+}
+
+.justify-right {
+  justify-self: end;
+}
+
+.justify-center {
+  justify-self: center;
+}
+
+.span2 {
+  grid-column: span 2;
 }

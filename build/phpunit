@@ -1,51 +1,43 @@
 PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
-..............EEEEE.                                              20 / 20 (100%)
+..............E.EEE.                                              20 / 20 (100%)
 
-Time: 00:00.124, Memory: 18.00 MB
+Time: 00:00.121, Memory: 18.00 MB
 
-There were 5 errors:
+There were 4 errors:
 
 1) Dundgren\Game21Test::testResetGame
 Trying to access array offset on value of type null
 
 /home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:42
 
-2) Dundgren\Game21Test::testPlayerRollStart
+2) Dundgren\Game21Test::testPlayerRollLoss
 Undefined index: bet
 
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:116
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:85
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:28
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:51
-
-3) Dundgren\Game21Test::testPlayerRollLoss
-Undefined index: bet
-
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:116
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:85
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:28
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:120
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:86
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:29
 /home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:60
 
-4) Dundgren\Game21Test::testBotRollLoss
+3) Dundgren\Game21Test::testBotRollLoss
 Undefined index: bet
 
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:116
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:106
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:44
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:120
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:107
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:45
 /home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:78
 
-5) Dundgren\Game21Test::testBotRollWin
+4) Dundgren\Game21Test::testBotRollWin
 Undefined index: bet
 
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:116
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:106
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:44
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:120
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:107
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:45
 /home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:88
 
 ERRORS!
-Tests: 20, Assertions: 26, Errors: 5.
+Tests: 20, Assertions: 27, Errors: 4.
 
-Generating code coverage report in Clover XML format ... done [00:00.024]
+Generating code coverage report in Clover XML format ... done [00:00.035]
 
-Generating code coverage report in HTML format ... done [00:00.032]
+Generating code coverage report in HTML format ... done [00:00.034]

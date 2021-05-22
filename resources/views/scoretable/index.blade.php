@@ -1,6 +1,7 @@
 @extends("layouts.app")
 
 @section("content")
+<div class="span2">
     <h1>Scoretable!</h1>
     <table>
         <tr>
@@ -20,4 +21,5 @@
             </tr>
         @endforeach
     </table>
+</div>
 @endsection

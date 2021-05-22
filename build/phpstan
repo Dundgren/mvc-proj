@@ -1,3 +1,17 @@
+ ------ ----------------------------------------------------------------------- 
+  Line   app/Http/Controllers/GamesPlayedController.php                         
+ ------ ----------------------------------------------------------------------- 
+  28     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.  
+  30     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.  
+  33     Access to an undefined property Dundgren\Models\GamesPlayed::$bet.     
+  34     Access to an undefined property                                        
+         Dundgren\Models\GamesPlayed::$blackjack.                               
+  35     Access to an undefined property                                        
+         Dundgren\Models\GamesPlayed::$player_score.                            
+  36     Access to an undefined property                                        
+         Dundgren\Models\GamesPlayed::$bot_score.                               
+ ------ ----------------------------------------------------------------------- 
+
  ------ ----------------------------------------------- 
   Line   app/Http/Controllers/ScoretableController.php  
  ------ ----------------------------------------------- 
@@ -8,6 +22,8 @@
   55     Call to an undefined static method             
          Dundgren\Models\Scoretable::find().            
   56     Call to an undefined static method             
+         Dundgren\Models\Scoretable::find().            
+  73     Call to an undefined static method             
          Dundgren\Models\Scoretable::find().            
  ------ ----------------------------------------------- 
 
@@ -24,5 +40,5 @@
          string|null but return statement is missing.                         
  ------ --------------------------------------------------------------------- 
 
- [ERROR] Found 6 errors                                                         
+ [ERROR] Found 13 errors                                                        
 

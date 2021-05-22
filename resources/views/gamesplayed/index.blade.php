@@ -1,7 +1,8 @@
 @extends("layouts.app")
 
 @section("content")
-    <h1>Scoretable!</h1>
+<div class="span2">
+    <h1>Previous games!</h1>
     <table>
         <tr>
         <th>Id</th>
@@ -24,4 +25,14 @@
             </tr>
         @endforeach
     </table>
+
+    <h2>Histogram of winning scores</h2>
+    @foreach ($histogram as $key => $value)
+        <p>{{ $key }}: 
+        @for ($i = 0; $i < $value; $i++)
+        *
+        @endfor
+        </p>
+    @endforeach
+</div>
 @endsection
