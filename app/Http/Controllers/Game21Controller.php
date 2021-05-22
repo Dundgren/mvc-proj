@@ -27,15 +27,6 @@ class Game21Controller
         return $this->render($message);
     }
 
-    public function clear()
-    {
-        $game = new Game21();
-        $game->clearHistory();
-        $message = $game->resetGame();
-
-        return $this->render($message);
-    }
-
     public function playerRoll()
     {
         $game = new Game21();

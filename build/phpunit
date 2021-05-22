@@ -1,43 +1,11 @@
 PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
-..............E.EEE.                                              20 / 20 (100%)
+.....................                                             21 / 21 (100%)
 
-Time: 00:00.121, Memory: 18.00 MB
+Time: 00:00.110, Memory: 16.00 MB
 
-There were 4 errors:
+OK (21 tests, 32 assertions)
 
-1) Dundgren\Game21Test::testResetGame
-Trying to access array offset on value of type null
+Generating code coverage report in Clover XML format ... done [00:00.039]
 
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:42
-
-2) Dundgren\Game21Test::testPlayerRollLoss
-Undefined index: bet
-
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:120
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:86
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:29
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:60
-
-3) Dundgren\Game21Test::testBotRollLoss
-Undefined index: bet
-
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:120
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:107
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:45
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:78
-
-4) Dundgren\Game21Test::testBotRollWin
-Undefined index: bet
-
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:120
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:107
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Models/Game21/Game21.php:45
-/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/test/Game21/Game21Test.php:88
-
-ERRORS!
-Tests: 20, Assertions: 27, Errors: 4.
-
-Generating code coverage report in Clover XML format ... done [00:00.035]
-
-Generating code coverage report in HTML format ... done [00:00.034]
+Generating code coverage report in HTML format ... done [00:00.032]

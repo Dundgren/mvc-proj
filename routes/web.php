@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use Dundgren\Http\Controllers\DiceController;
 use Dundgren\Http\Controllers\Game21Controller;
 use Dundgren\Http\Controllers\BookController;
-use Dundgren\Http\Controllers\WinnerController;
 use Dundgren\Http\Controllers\ScoretableController;
 use Dundgren\Http\Controllers\GamesPlayedController;
 

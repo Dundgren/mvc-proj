@@ -43,6 +43,8 @@ class GamesPlayedController extends Controller
 
     private function getHistogram()
     {
+        $histogram = [];
+
         for ($i = 0; $i <= 21; $i++) {
             $histogram[$i] = 0;
         }

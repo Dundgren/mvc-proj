@@ -1,44 +1,33 @@
- ------ ----------------------------------------------------------------------- 
-  Line   app/Http/Controllers/GamesPlayedController.php                         
- ------ ----------------------------------------------------------------------- 
-  28     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.  
-  30     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.  
-  33     Access to an undefined property Dundgren\Models\GamesPlayed::$bet.     
-  34     Access to an undefined property                                        
-         Dundgren\Models\GamesPlayed::$blackjack.                               
-  35     Access to an undefined property                                        
-         Dundgren\Models\GamesPlayed::$player_score.                            
-  36     Access to an undefined property                                        
-         Dundgren\Models\GamesPlayed::$bot_score.                               
- ------ ----------------------------------------------------------------------- 
+ ------ ----------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/GamesPlayedController.php                               
+ ------ ----------------------------------------------------------------------------- 
+  31     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.        
+  33     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.        
+  36     Access to an undefined property Dundgren\Models\GamesPlayed::$bet.           
+  37     Access to an undefined property Dundgren\Models\GamesPlayed::$blackjack.     
+  38     Access to an undefined property Dundgren\Models\GamesPlayed::$player_score.  
+  39     Access to an undefined property Dundgren\Models\GamesPlayed::$bot_score.     
+  55     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.        
+  56     Access to an undefined property Dundgren\Models\GamesPlayed::$player_score.  
+  57     Access to an undefined property Dundgren\Models\GamesPlayed::$winner.        
+  58     Access to an undefined property Dundgren\Models\GamesPlayed::$bot_score.     
+ ------ ----------------------------------------------------------------------------- 
 
- ------ ----------------------------------------------- 
-  Line   app/Http/Controllers/ScoretableController.php  
- ------ ----------------------------------------------- 
-  35     Call to an undefined static method             
-         Dundgren\Models\Scoretable::find().            
-  36     Call to an undefined static method             
-         Dundgren\Models\Scoretable::find().            
-  55     Call to an undefined static method             
-         Dundgren\Models\Scoretable::find().            
-  56     Call to an undefined static method             
-         Dundgren\Models\Scoretable::find().            
-  73     Call to an undefined static method             
-         Dundgren\Models\Scoretable::find().            
- ------ ----------------------------------------------- 
+ ------ ------------------------------------------------------------------------ 
+  Line   app/Http/Controllers/ScoretableController.php                           
+ ------ ------------------------------------------------------------------------ 
+  35     Call to an undefined static method Dundgren\Models\Scoretable::find().  
+  36     Call to an undefined static method Dundgren\Models\Scoretable::find().  
+  55     Call to an undefined static method Dundgren\Models\Scoretable::find().  
+  56     Call to an undefined static method Dundgren\Models\Scoretable::find().  
+  73     Call to an undefined static method Dundgren\Models\Scoretable::find().  
+ ------ ------------------------------------------------------------------------ 
 
- ------ ---------------------------------------------------------------- 
-  Line   app/Http/Controllers/WinnerController.php                       
- ------ ---------------------------------------------------------------- 
-  27     Access to an undefined property Dundgren\Models\Winner::$name.  
- ------ ---------------------------------------------------------------- 
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  Line   app/Http/Middleware/Authenticate.php                                                                              
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  17     Method App\Http\Middleware\Authenticate::redirectTo() should return string|null but return statement is missing.  
+ ------ ------------------------------------------------------------------------------------------------------------------ 
 
- ------ --------------------------------------------------------------------- 
-  Line   app/Http/Middleware/Authenticate.php                                 
- ------ --------------------------------------------------------------------- 
-  17     Method App\Http\Middleware\Authenticate::redirectTo() should return  
-         string|null but return statement is missing.                         
- ------ --------------------------------------------------------------------- 
-
- [ERROR] Found 13 errors                                                        
+ [ERROR] Found 16 errors                                                                                                
 

@@ -21,15 +21,6 @@ class Game21Test extends TestCase
         $this->assertInstanceOf("Dundgren\Models\Game21\Game21", $game21);
     }
 
-    public function testClearHistory()
-    {
-        $_SESSION["history"] = "Hello";
-        $game21 = new Game21();
-        $game21->clearHistory();
-
-        $this->assertEmpty($_SESSION["history"]);
-    }
-
     public function testResetGame()
     {
         $game21 = new Game21();
@@ -39,8 +30,6 @@ class Game21Test extends TestCase
         $this->assertEmpty($_SESSION["playerSum"]);
         $this->assertEmpty($_SESSION["botResults"]);
         $this->assertEmpty($_SESSION["playerResults"]);
-        $this->assertEmpty($_SESSION["history"]["roundCount"]);
-        $this->assertEmpty($_SESSION["history"]["winners"]);
         $this->assertEquals("Play a game of 21!", $res);
     }
 
@@ -54,24 +43,27 @@ class Game21Test extends TestCase
 
     public function testPlayerRollLoss()
     {
+        $_SESSION["isTest"] = true;
         $_POST["dice"] = 2;
         $_SESSION["playerSum"] = 22;
         $game21 = new Game21();
         $res = $game21->playerRoll();
-        $this->assertEquals("Bot wins!", $res);
+        $this->assertEquals("House wins!", $res);
     }
 
-    // public function testPlayerRollWin()
-    // {
-    //     $_POST["dice"] = 0;
-    //     $_SESSION["playerSum"] = 21;
-    //     $game21 = new Game21();
-    //     $res = $game21->playerRoll();
-    //     $this->assertEquals("Player wins!", $res);
-    // }
+    public function testPlayerRollWin()
+    {
+        $_SESSION["isTest"] = true;
+        $_POST["dice"] = 0;
+        $_SESSION["playerSum"] = 21;
+        $game21 = new Game21();
+        $res = $game21->playerRoll();
+        $this->assertEquals("Player wins!", $res);
+    }
 
     public function testBotRollLoss()
     {
+        $_SESSION["isTest"] = true;
         $_POST["dice"] = 2;
         $_SESSION["botSum"] = 22;
         $game21 = new Game21();
@@ -81,21 +73,23 @@ class Game21Test extends TestCase
 
     public function testBotRollWin()
     {
+        $_SESSION["isTest"] = true;
         $_POST["dice"] = 1;
         $_SESSION["playerSum"] = 7;
         $_SESSION["botSum"] = 0;
         $game21 = new Game21();
         $res = $game21->botRoll();
-        $this->assertEquals("Bot wins!", $res);
+        $this->assertEquals("House wins!", $res);
     }
 
-    // public function testBotRollWin2()
-    // {
-    //     $_POST["dice"] = 0;
-    //     $_SESSION["playerSum"] = 7;
-    //     $_SESSION["botSum"] = 21;
-    //     $game21 = new Game21();
-    //     $res = $game21->botRoll();
-    //     $this->assertEquals("Bot wins!", $res);
-    // }
+    public function testBotRollWin2()
+    {
+        $_SESSION["isTest"] = true;
+        $_POST["dice"] = 0;
+        $_SESSION["playerSum"] = 7;
+        $_SESSION["botSum"] = 21;
+        $game21 = new Game21();
+        $res = $game21->botRoll();
+        $this->assertEquals("House wins!", $res);
+    }
 }

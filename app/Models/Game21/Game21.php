@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Dundgren\Models\Game21;
 
 use Dundgren\Models\Dice\DiceHand;
-use Dundgren\Http\Controllers\WinnerController;
 use Dundgren\Http\Controllers\ScoretableController;
 use Dundgren\Http\Controllers\GamesPlayedController;
 
@@ -64,11 +63,6 @@ class Game21
         return "Play a game of 21!";
     }
 
-    public function clearHistory(): void
-    {
-        $_SESSION["history"] = null;
-    }
-
     private function checkPlayerResult($playerSum): string
     {
         $result = "continue";
@@ -76,9 +70,6 @@ class Game21
         if ($playerSum == 21) {
             $result = "win";
             $_SESSION["blackjack"] = true;
-
-            $wCon = new WinnerController();
-            $wCon->addWinner("Player");
         } elseif ($playerSum > 21) {
             $result = "loss";
         }
@@ -95,9 +86,6 @@ class Game21
         if ($botSum == 21) {
             $result = "loss";
             $_SESSION["blackjack"] = true;
-
-            $wCon = new WinnerController();
-            $wCon->addWinner("Bot");
         } elseif ($botSum > 21) {
             $result = "win";
         } elseif ($botSum >= $_SESSION["playerSum"]) {
@@ -115,12 +103,15 @@ class Game21
 
         if ($result != "continue") {
             $blackjack = $_SESSION["blackjack"] ? "Yes" : "No";
+            $isTest = $_SESSION["isTest"] ?? false;
 
-            $gpCon = new GamesPlayedController();
-            $gpCon->addGame($result, $_POST["bet"], $blackjack, $_SESSION["playerSum"], $_SESSION["botSum"]);
+            if (!$isTest) {
+                $gpCon = new GamesPlayedController();
+                $gpCon->addGame($result, $_POST["bet"], $blackjack, $_SESSION["playerSum"], $_SESSION["botSum"]);
 
-            $sCon = new ScoretableController();
-            $sCon->handleResult($result, $_SESSION["blackjack"], $_POST["bet"]);
+                $sCon = new ScoretableController();
+                $sCon->handleResult($result, $_SESSION["blackjack"], $_POST["bet"]);
+            }
         }
     }
 

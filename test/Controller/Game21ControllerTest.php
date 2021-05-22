@@ -20,18 +20,4 @@ class Game21ControllerTest extends TestCase
         $game21c = new Game21Controller();
         $this->assertInstanceOf("Dundgren\Http\Controllers\Game21Controller", $game21c);
     }
-
-    // public function testReset()
-    // {
-    //     $game21c = new Game21Controller();
-    //     $res = $game21c->reset();
-    //     $this->assertInstanceOf("Psr\Http\Message\ResponseInterface", $res);
-    // }
-
-    // public function testClear()
-    // {
-    //     $game21c = new Game21Controller();
-    //     $res = $game21c->clear();
-    //     $this->assertInstanceOf("Psr\Http\Message\ResponseInterface", $res);
-    // }
 }
