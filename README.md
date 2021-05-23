@@ -12,16 +12,16 @@ This project has been created using Laravel. For testing several tools have been
 The main code for the game itself is placed in the "app" directory. Here you will find the models and controllers. The views are found under "resources/views". Each page has its own folder with at least an index-file. The routes are found under the "routes" directory in the file web.php. The tests are placed in the directory "test" and is divided in 3 folders. The entrypoint for the app is through the "public" folder. An .htaccess-file is placed there for access via a web-server. The config files for all validators can be found at the base directory.
 
 ## Installing
--To install the app first download the latest version from the github repo: https://github.com/Dundgren/mvc-proj.
--Once downloaded first run "make clean-all install" in the terminal. This will create a fresh install of dependencies and validators.
--Secondly run "npm install". This is only for installing material-icons.
--Lastly run "php artisan optimize:clear". This clears the cache.
+* To install the app first download the latest version from the github repo: https://github.com/Dundgren/mvc-proj.
+* Once downloaded first run "make clean-all install" in the terminal. This will create a fresh install of dependencies and validators.
+* Secondly run "npm install". This is only for installing material-icons.
+* Lastly run "php artisan optimize:clear". This clears the cache.
 
 Once installed type "php artisan serve" to start the app. The app will be found on localhost:8000.
 
 ### Possible problems
--If you're running the app on an apache server you have to adjust the .htaccess file in the public folder in order to access index.php placed in the same folder.
--Make sure the database directory and database.sqlite file aren't read-only. The database is written to when a game finishes.
+* If you're running the app on an apache server you have to adjust the .htaccess file in the public folder in order to access index.php placed in the same folder.
+* Make sure the database directory and database.sqlite file aren't read-only. The database is written to when a game finishes.
 
 ## Playing
 Game21 is simply blackjack but with dice. Here are the rules if you haven't played it before: The goal for the player is to get a higher number than the house or exactly 21. The player rolls first and may continue to roll until the score reaches 21 (automatic win), over 21 (instant loss) or until the player chooses to stop. After the player has rolled the house will roll to achieve the same results. If the house achieves a higher, equal or a score of 21 the player loses. If the house achieves a score over 21 the player wins.
