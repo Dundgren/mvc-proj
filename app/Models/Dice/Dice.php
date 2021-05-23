@@ -9,8 +9,8 @@ namespace Dundgren\Models\Dice;
  */
 class Dice
 {
-    private int $faces;
-    protected ?int $roll = null;
+    private $faces;
+    protected $roll = null;
 
     public function __construct($faces)
     {

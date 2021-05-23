@@ -9,9 +9,9 @@ namespace Dundgren\Models\Dice;
  */
 class DiceHand
 {
-    private array $dices;
-    private array $results = [];
-    private int $sum = 0;
+    private $dices;
+    private $results = [];
+    private $sum = 0;
 
     public function __construct($numDice)
     {
