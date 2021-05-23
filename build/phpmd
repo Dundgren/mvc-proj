@@ -1,0 +1,9 @@
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/GamesPlayedController.php:14	Avoid using static access to class '\Dundgren\Models\GamesPlayed' in method 'getData'.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/GamesPlayedController.php:52	Avoid using static access to class '\Dundgren\Models\GamesPlayed' in method 'getHistogram'.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoretableController.php:14	Avoid using static access to class '\Dundgren\Models\Scoretable' in method 'getData'.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoretableController.php:35	Avoid using static access to class '\Dundgren\Models\Scoretable' in method 'handleWin'.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoretableController.php:36	Avoid using static access to class '\Dundgren\Models\Scoretable' in method 'handleWin'.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoretableController.php:44	The method handleWin uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoretableController.php:55	Avoid using static access to class '\Dundgren\Models\Scoretable' in method 'handleLoss'.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoretableController.php:56	Avoid using static access to class '\Dundgren\Models\Scoretable' in method 'handleLoss'.
+/home/dundgren2/winhome/dbwebb-kurser/mvc/me/proj/app/Http/Controllers/ScoretableController.php:73	Avoid using static access to class '\Dundgren\Models\Scoretable' in method 'reset'.
