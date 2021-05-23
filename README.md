@@ -7,9 +7,17 @@ This app was created as an end project for the course MVC. The main focus isn't 
 This project has been created using Laravel. For testing several tools have been installed; Phpcs, phpcbf, phpcpd, phpmd, phpstan and phpunit. For continous integration both Travis and Scrutinizer are used. The relevant badges can be found at the top of this document.
 
 ## Structure
-The main code for the game itself is placed in the "app" directory. Here you will find the models and controllers. The views are found under "resources/views". Each page has its own folder with at least an index-file. The routes are found under the "routes" directory in the file web.php. The tests are placed in the directory "test" and is divided in 3 folders. The entrypoint for the app is through the "public" folder. An .htaccess-file is placed there for access via a web-server.
+The main code for the game itself is placed in the "app" directory. Here you will find the models and controllers. The views are found under "resources/views". Each page has its own folder with at least an index-file. The routes are found under the "routes" directory in the file web.php. The tests are placed in the directory "test" and is divided in 3 folders. The entrypoint for the app is through the "public" folder. An .htaccess-file is placed there for access via a web-server. The config files for all validators can be found at the base directory.
 
 ## Installing
+Clear cache 2
+composer dump
+make clean-all install 1
+htaccess 
+npm install
+create .env
+copy example to .env
+php artisan key:generate
 
 ## Playing
 Game21 is simply blackjack but with dice. Here are the rules if you haven't played it before: The goal for the player is to get a higher number than the house or exactly 21. The player rolls first and may continue to roll until the score reaches 21 (automatic win), over 21 (instant loss) or until the player chooses to stop. After the player has rolled the house will roll to achieve the same results. If the house achieves a higher, equal or a score of 21 the player loses. If the house achieves a score over 21 the player wins.
